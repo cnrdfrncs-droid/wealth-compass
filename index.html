@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wealth Compass Founding Cohort | Inspired Money</title>
+<meta name="description" content="Three digital money tools within reach, with a team alongside you. 10 Founding Cohort places at $795 a year, billed monthly. Starts 18 January 2027.">
+<meta property="og:title" content="Wealth Compass Founding Cohort">
+<meta property="og:description" content="Know where you are. Know where you're headed. 10 places, starting January 2027.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='none' stroke='%232B3440' stroke-width='4'/%3E%3Cpath d='M32 8 38 32 32 56 26 32Z' fill='%232B3440'/%3E%3Cpath d='M32 8 38 32H26Z' fill='%232E86DE'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2B3440;--azure:#2E86DE;--azure-deep:#1E6FBE;--surface:#EEF2F7;--mist:#AEB7C2;--night:#1A2028;--white:#fff;
+  --muted:#5A6573;
+  --sans:'Montserrat',Arial,sans-serif;--serif:Georgia,'Times New Roman',serif;
+  --wrap:1080px;--r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--azure-deep)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--azure-deep)}
+h1,h2,h3{line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(34px,6vw,58px);font-weight:800}
+h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin-bottom:14px}
+h3{font-size:19px;font-weight:700;margin-bottom:6px}
+.tagline{font-family:var(--serif);font-style:italic;color:var(--azure)}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:640px}
+.btn{display:inline-block;background:var(--azure);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:16px 28px;border-radius:999px;transition:background .15s,transform .15s}
+.btn:hover{background:var(--azure-deep);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--mist)}
+.btn-ghost:hover{background:var(--surface)}
+section{padding:72px 0}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--surface)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand b{font-weight:800;letter-spacing:.08em;font-size:15px}
+.brand small{display:block;font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.02em}
+header .btn{padding:10px 18px;font-size:14px}
+
+/* hero */
+.hero{background:var(--surface);position:relative;overflow:hidden;padding:84px 0 92px}
+.hero .wm{position:absolute;right:-120px;top:-60px;width:520px;opacity:.07;pointer-events:none}
+.hero h1 .tagline{display:block;font-weight:400;font-size:.62em;margin-top:14px;letter-spacing:0}
+.hero .lead{margin:22px 0 30px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.pill{background:#fff;border:1px solid #dde3ea;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600}
+.pill span{color:var(--azure-deep)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* why */
+.split{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:860px){.split{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}}
+.quote{border-left:4px solid var(--azure);padding:6px 0 6px 20px;font-family:var(--serif);font-size:21px;line-height:1.45}
+
+/* tools */
+.tools{background:var(--surface)}
+.grid3{display:grid;grid-template-columns:1fr;gap:18px;margin-top:32px}
+@media(min-width:760px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:var(--r);padding:26px;border:1px solid #e1e6ed}
+.card .n{width:38px;height:38px;border-radius:50%;background:var(--surface);color:var(--azure-deep);display:grid;place-items:center;font-weight:800;margin-bottom:14px}
+.card p{color:var(--muted);font-size:16px}
+.plus{margin-top:22px;background:var(--night);color:#fff;border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:flex-start}
+.plus svg{flex:none;margin-top:3px}
+.plus p{color:#d4dbe4;font-size:16px}
+
+/* journey */
+.journey{list-style:none;margin-top:30px;border-left:2px solid var(--mist);padding-left:26px}
+.journey li{position:relative;padding-bottom:24px}
+.journey li:last-child{padding-bottom:0}
+.journey li::before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--azure)}
+.journey .m{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--azure-deep)}
+.journey p{color:var(--muted);font-size:16px}
+
+/* price */
+.price{background:var(--night);color:#fff}
+.price .lead{color:#c9d2dc}
+.pricebox{background:#fff;color:var(--ink);border-radius:20px;padding:34px 28px;margin-top:30px;max-width:520px}
+.amt{font-size:56px;font-weight:800;line-height:1}
+.amt small{font-size:18px;font-weight:600;color:var(--muted)}
+.was{color:var(--muted);font-size:15px;margin:8px 0 20px}
+.was s{color:var(--mist)}
+.ticks{list-style:none;margin:0 0 26px}
+.ticks li{padding:7px 0 7px 30px;position:relative;font-size:16px;border-bottom:1px solid var(--surface)}
+.ticks li::before{content:"";position:absolute;left:2px;top:13px;width:14px;height:8px;border-left:3px solid var(--azure);border-bottom:3px solid var(--azure);transform:rotate(-45deg)}
+.dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px;max-width:520px}
+.date{border:1px solid #3a4553;border-radius:12px;padding:14px 16px}
+.date b{display:block;font-size:18px}
+.date span{font-size:13px;color:#aab5c2;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+
+/* fit */
+.fit{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px}
+@media(min-width:760px){.fit{grid-template-columns:1fr 1fr}}
+.fit .card h3{display:flex;gap:10px;align-items:center}
+.fit ul{list-style:none}
+.fit li{padding:8px 0;border-bottom:1px solid var(--surface);font-size:16px;color:var(--muted)}
+.fit li:last-child{border:0}
+
+/* steps */
+.steps{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px;counter-reset:s}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{padding:22px;border-radius:var(--r);background:var(--surface)}
+.step::before{counter-increment:s;content:counter(s);display:block;font-size:34px;font-weight:800;color:var(--azure);line-height:1;margin-bottom:10px}
+.step p{color:var(--muted);font-size:16px}
+
+/* faq */
+details{border-bottom:1px solid #dfe5ec;padding:18px 0}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--azure-deep);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px;font-size:16px}
+
+/* final */
+.final{background:var(--surface);text-align:center}
+.final .lead{margin:12px auto 28px}
+
+footer{background:var(--night);color:#aab5c2;font-size:13px;padding:40px 0 48px;line-height:1.7}
+footer b{color:#fff}
+footer p+p{margin-top:12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Wealth Compass home">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="#2B3440" stroke-width="3"/><circle cx="32" cy="32" r="22" fill="none" stroke="#AEB7C2" stroke-width="1.5"/><path d="M32 8 38 32 32 56 26 32Z" fill="#2B3440"/><path d="M32 8 38 32H26Z" fill="#2E86DE"/><path d="M8 32 32 27 56 32 32 37Z" fill="#AEB7C2"/></svg>
+      <span><b>WEALTH COMPASS</b><small>by Inspired Money</small></span>
+    </a>
+    <a class="btn" href="#apply">Apply now</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <svg class="wm" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="#2B3440" stroke-width="1"/><circle cx="32" cy="32" r="22" fill="none" stroke="#2B3440" stroke-width=".5"/><path d="M32 8 38 32 32 56 26 32Z" fill="#2B3440"/><path d="M8 32 32 27 56 32 32 37Z" fill="#2B3440"/></svg>
+  <div class="wrap">
+    <p class="eyebrow">Founding Cohort · 10 places · Starts January 2027</p>
+    <h1 style="margin-top:14px">Three money tools in the palm of your hand.<span class="tagline">Know where you are. Know where you're headed.</span></h1>
+    <p class="lead">Wealth Compass is a digital service from Inspired Money. It puts three tools within reach, with a coach alongside you to make sure you actually use them.</p>
+    <div class="cta-row">
+      <a class="btn" href="#apply">Apply for a place</a>
+      <a class="btn btn-ghost" href="#how">How it works</a>
+    </div>
+    <div class="pills">
+      <span class="pill">$795 a year · <span>about $15 a week</span></span>
+      <span class="pill">Applications close <span>11/12/2026</span></span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Why we built it</p>
+      <h2>Great tools are easy to find. Using them is the hard part.</h2>
+      <p class="lead">Most people already have access to apps that track spending or project their super. Very few use them well, or act on what they see.</p>
+      <p style="margin-top:16px;color:var(--muted)">Wealth Compass pairs the tools with a simple monthly rhythm and a real person who checks in. And when a bigger decision comes up, a licensed adviser is right there.</p>
+    </div>
+    <p class="quote">"Australians deserve clarity about their money, and access to help they can actually afford."<br><span style="font-family:var(--sans);font-style:normal;font-size:15px;color:var(--muted)">Conrad Francis, Founding Director, Inspired Money</span></p>
+  </div>
+</section>
+
+<section class="tools" id="how">
+  <div class="wrap">
+    <p class="eyebrow">One service. Three tools. All within reach.</p>
+    <h2>What you get</h2>
+    <div class="grid3">
+      <div class="card"><div class="n">1</div><h3>Wealth Portal</h3><p>See your accounts, super, property and budget in one secure view on your phone. Access to your bank data is read-only.</p></div>
+      <div class="card"><div class="n">2</div><h3>Otivo</h3><p>Personal digital financial advice on super, retirement, debt and everyday money decisions, whenever you need it. Provided by Otivo under its own licence.</p></div>
+      <div class="card"><div class="n">3</div><h3>Financial Knowledge Centre</h3><p>Clear, trusted education from Iress for when you want to understand the "why" behind a decision.</p></div>
+    </div>
+    <div class="plus">
+      <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="#AEB7C2" stroke-width="4"/><path d="M32 8 38 32H26Z" fill="#2E86DE"/><path d="M32 56 38 32H26Z" fill="#fff"/></svg>
+      <div><h3 style="color:#fff">Plus a team alongside you</h3><p>Founding members get a 1:1 setup session and four live group sessions on Microsoft Teams with our money coach over your first 12 weeks. When a bigger decision comes up, we'll connect you with a licensed adviser.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Your first 12 weeks</p>
+    <h2>One quarter, one clear rhythm</h2>
+    <p class="lead">Starting Monday 18 January 2027 and finishing in mid-April. One 1:1 session to get you set up, then four live group sessions on Teams, each about an hour.</p>
+    <ul class="journey">
+      <li><span class="m">Weeks 1–2 · 1:1</span><h3>Your setup session</h3><p>A one-on-one call with our money coach to link your accounts, get comfortable with the three tools and agree what you want from the quarter.</p></li>
+      <li><span class="m">Week 2 · Group session 1</span><h3>Know where you are</h3><p>Your whole picture in one place: what you own, what you owe and where your money goes.</p></li>
+      <li><span class="m">Week 5 · Group session 2</span><h3>Your spending plan and debt</h3><p>Build a plan that fits real life and a clear approach to paying down debt.</p></li>
+      <li><span class="m">Week 9 · Group session 3</span><h3>Super, retirement and protection</h3><p>Use Otivo to check you're on track, and learn the basics of protecting your income and family.</p></li>
+      <li><span class="m">Week 12 · Group session 4</span><h3>Know where you're headed</h3><p>Set your goals for the year ahead and leave with a short summary of your next steps.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="price">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#7fb6ee">Founding price</p>
+    <h2>Half price for our first 10 members</h2>
+    <p class="lead">In return, we ask for your honest feedback so we can make Wealth Compass better for everyone who comes next.</p>
+    <div class="pricebox">
+      <div class="amt">$66.25 <small>a month</small></div>
+      <p class="was">$795 a year incl. GST, billed monthly with a 12-month minimum. <s>$1,595</s> standard price.</p>
+      <ul class="ticks">
+        <li>Wealth Portal, Otivo and the Knowledge Centre</li>
+        <li>A 1:1 setup session with our money coach</li>
+        <li>Four live group sessions on Teams over 12 weeks</li>
+        <li>A clear path to a licensed adviser if you need one</li>
+      </ul>
+      <a class="btn" href="#apply" style="width:100%;text-align:center">Apply for a place</a>
+    </div>
+    <div class="dates">
+      <div class="date"><span>Applications close</span><b>Fri 11/12/2026</b></div>
+      <div class="date"><span>Cohort starts</span><b>Mon 18/01/2027</b></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Is it for you?</p>
+    <h2>Wealth Compass suits some people better than others</h2>
+    <div class="fit">
+      <div class="card">
+        <h3><span style="color:var(--azure)">●</span> A great fit if you</h3>
+        <ul>
+          <li>Earn an income and want a clear picture of your cash flow, super and goals</li>
+          <li>Are comfortable using apps on your phone and linking your accounts</li>
+          <li>Are happy to give feedback and join four group sessions on Teams</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><span style="color:var(--mist)">●</span> Probably not right now if you</h3>
+        <ul>
+          <li>Have a complex decision in front of you, like aged care, selling a business or estate planning. Personal advice will serve you better.</li>
+          <li>Are already an Inspired Money advice client. Ask your adviser about our two-licence offer instead. Your friends and family are very welcome to apply.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">What happens next</p>
+    <h2>Three simple steps</h2>
+    <div class="steps">
+      <div class="step"><h3>Apply</h3><p>Two minutes. Tell us a little about you and what you'd like help with.</p></div>
+      <div class="step"><h3>Fit call</h3><p>Daniel, our money coach, books a 15-minute call to make sure it's right for you.</p></div>
+      <div class="step"><h3>Join</h3><p>Places are offered to the first 10 people who are a good fit. Everyone else goes to the front of the queue for the next cohort.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap" style="max-width:780px">
+    <p class="eyebrow">Questions</p>
+    <h2>Good to know</h2>
+    <details><summary>Can I apply if a friend or family member is an Inspired Money client?</summary><p>Yes, please do. Friends and family of our clients are very welcome to apply for the Founding Cohort.</p></details>
+    <details><summary>Is this financial advice?</summary><p>Partly. Otivo provides personal digital advice on the topics it covers, under its own Australian financial services licence. Read Otivo's Financial Services and Credit Guide before you use it. Our setup session, group sessions and Wealth Portal are general in nature and don't take into account your personal objectives, financial situation or needs. If you need personal advice beyond what Otivo covers, we'll connect you with one of our licensed advisers, which is a separate service.</p></details>
+    <details><summary>Is my data safe?</summary><p>Wealth Portal connects to your accounts with read-only access, so nothing can be moved or changed. We'll walk you through exactly how it works on your welcome call before you link anything.</p></details>
+    <details><summary>What does "12-month minimum" mean?</summary><p>The founding price is $795 for your first year, paid as $66.25 a month. You can cancel for a full refund within 14 days of accepting your place, as long as your setup session hasn't happened yet. After that, the remaining instalments for your 12 months stay payable: because the founding price is heavily discounted, we don't offer refunds or early release outside the cooling-off period. This doesn't affect your rights under the Australian Consumer Law. Full terms are provided before you join.</p></details>
+    <details><summary>What happens after 12 months?</summary><p>Your founding price covers your first 12 months. From year two, Wealth Compass continues at the standard price of $1,595 a year, or you can stop at that point. We'll remind you well before your renewal date.</p></details>
+    <details><summary>How much time will it take?</summary><p>Over the first 12 weeks: one 1:1 setup session, four group sessions on Teams of about an hour each, and a quick weekly check of your Wealth Portal. After that, the tools are yours to keep using for the rest of your 12-month subscription.</p></details>
+    <details><summary>What if the 10 places fill up?</summary><p>You'll go on the waitlist for our next cohort, and we'll let you know as soon as it opens.</p></details>
+  </div>
+</section>
+
+<section class="final" id="apply">
+  <div class="wrap">
+    <p class="eyebrow">10 places · Applications close 11/12/2026</p>
+    <h2>Ready to know where you're headed?</h2>
+    <p class="lead">Applying takes about two minutes and doesn't commit you to anything.</p>
+    <a class="btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=f0x4UQuPTkmipGRCZvUrmUoLyP90r_1Fv3rl2RvA_nBUNTlHWlUyVVo1QUJRUk82R0xJWDNIUURWNC4u" target="_blank" rel="noopener">Start my application</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>General advice warning.</b> The information on this page is general in nature and does not take into account your personal objectives, financial situation or needs. Before acting on it, consider whether it is appropriate for you and, where relevant, read the product disclosure statement or seek personal financial advice.</p>
+    <p>Wealth Compass is a service of Inspired Money. Inspired Money is a trading name of FML Financial Solutions Pty Ltd ACN 148 937 222, a Corporate Authorised Representative of Inspired Financial Group, AFSL 494196. Wealth Portal is powered by MyProsperity. Otivo Pty Ltd (ABN 47 602 457 732, AFSL and ACL 485665) provides personal digital advice under its own licence and is not independent; read Otivo's Financial Services and Credit Guide before using it. The Financial Knowledge Centre is provided by Iress.</p>
+    <p>35-37 Havelock Street, West Perth WA 6005 · <a href="https://inspiredmoney.com.au" style="color:#7fb6ee">inspiredmoney.com.au</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
