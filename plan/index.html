@@ -12,7 +12,7 @@
 /* ---------- SETTINGS: the only lines you need to change ---------- */
 const SETTINGS = {
   // The "When an HTTP request is received" URL from your Power Automate flow.
-  FLOW_URL: "",
+  FLOW_URL: "https://default51784c7f8f0b494ea2a4644266f52b.99.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/06/workflows/c28422197cde4222aef89815e8400baa/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=-M9hoKn7BhjMWWBSDH70rmwzL5V4QFG5nRuCHdtf57w",
   // Your privacy policy page.
   PRIVACY_URL: "https://inspiredmoney.com.au/privacy-policy/",
   // Where the thank-you message sends people next (Wealth Compass page or fit call). Leave "" to hide it.
@@ -172,7 +172,8 @@ footer a{color:var(--ochre)}
     const data = { name, email, mobile, consent: true, source: 'Eight Steps plan', page: location.href, submitted: new Date().toISOString() };
     try {
       // Sent as plain text so the browser doesn't need permission from Power Automate first.
-      await fetch(SETTINGS.FLOW_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data) });
+      const res = await fetch(SETTINGS.FLOW_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      if (!res.ok) throw new Error('send failed');
       $('sentto').textContent = email; f.hidden = true; $('done').hidden = false;
     } catch (err) {
       go.disabled = false; say('That didn’t go through. Please try again in a moment.', true);
