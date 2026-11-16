@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Confirm Your Place | Wealth Compass</title>
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Three digital money tools within reach, with a team alongside you. 10 Founding Cohort places at $795 a year, billed monthly. Starts 18 January 2027.">
+<meta name="description" content="Three digital money tools within reach, with a team alongside you. 10 Founding Cohort places at $795 a year, upfront or monthly. Starts 18 January 2027.">
 <meta property="og:title" content="Wealth Compass Founding Cohort">
 <meta property="og:description" content="Know where you are. Know where you're headed. 10 places, starting January 2027.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='52' fill='none' stroke='%230E1A2B' stroke-width='12'/%3E%3Cpath d='M60 12 L75 60 L60 108 L45 60 Z' fill='%230E1A2B'/%3E%3Cpath d='M60 12 L75 60 L45 60 Z' fill='%231A5FB4'/%3E%3C/svg%3E">
@@ -137,6 +137,9 @@ footer p+p{margin-top:12px}
 .check{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border-radius:12px;padding:16px;margin:10px 0;font-size:16px;cursor:pointer}
 .check input{width:22px;height:22px;margin-top:2px;flex:none;accent-color:var(--azure)}
 .btn[aria-disabled=true]{background:var(--mist);pointer-events:none}
+.payopts{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0}@media(min-width:620px){.payopts{grid-template-columns:1fr 1fr}}
+.payopt{border:1px solid var(--mist);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.payopt span{color:var(--muted);font-size:15px;margin-bottom:8px}.payopt .btn{text-align:center;font-size:16px;padding:14px 18px}
 .docs a{display:block;padding:12px 0;border-bottom:1px solid var(--surface);font-weight:600}
 </style>
 </head>
@@ -153,20 +156,23 @@ footer p+p{margin-top:12px}
 <li><h3>Read the documents</h3><p>Please read both before you confirm.</p>
 <ul style="margin:10px 0 0 18px;color:var(--muted);font-size:16px"><li>Founding Cohort Terms and Conditions</li><li>Otivo Financial Services and Credit Guide</li></ul><p style="font-size:14px;margin-top:6px">Both are attached to Daniel's email. Ask him if you can't find them.</p></li>
 <li><h3>Check the key points</h3>
-<label class="check"><input type="checkbox" class="ack"> <span>I understand the founding price is <b>$795 for my first year</b>, paid as 12 monthly payments of $66.25 (GST included), and that it moves to $1,595 a year from year two.</span></label>
+<label class="check"><input type="checkbox" class="ack"> <span>I understand the founding price is <b>$795 for my first year</b> (GST included), paid either upfront or as 12 monthly payments of $66.25, and that it moves to $1,595 a year from year two.</span></label>
 <label class="check"><input type="checkbox" class="ack"> <span>I understand there's a <b>12-month minimum</b>. I can cancel for a full refund within 14 days of paying, as long as my setup session hasn't happened. After that, the remaining payments stay payable and there are no refunds or early release. This doesn't affect my rights under the Australian Consumer Law.</span></label>
 <label class="check"><input type="checkbox" class="ack"> <span>I understand Inspired Money's sessions are general in nature, and any personal advice from Otivo is provided by Otivo Pty Ltd under its own licence (AFSL and ACL 485665).</span></label></li>
-<li><h3>Set up your monthly payment</h3><p>You'll go to Square, our secure payment provider.</p>
-<div class="callout"><b>Important:</b> on the Square page, choose <b>"Subscription"</b>, not "One-time purchase". Square will then charge $66.25 each month and stop automatically after 12 payments. (Square's page says "cancel at any time"; your 12-month minimum in our terms still applies.)</div>
-<a id="pay" class="btn" aria-disabled="true" href="https://square.link/u/zpQoXkEQ" target="_blank" rel="noopener">Confirm my place: $66.25 a month</a>
+<li><h3>Choose how to pay</h3><p>You'll go to Square, our secure payment provider. Pick one option.</p>
+<div class="payopts">
+<div class="payopt"><b>Pay upfront</b><span>One payment of $795</span><a class="btn pay" aria-disabled="true" href="https://square.link/u/BccAvyqs" target="_blank" rel="noopener">Pay $795 upfront</a></div>
+<div class="payopt"><b>Pay monthly</b><span>12 payments of $66.25</span><a class="btn pay" aria-disabled="true" href="https://square.link/u/zpQoXkEQ" target="_blank" rel="noopener">Pay $66.25 a month</a></div>
+</div>
+<div class="callout"><b>If you pay monthly:</b> on the Square page, choose <b>"Subscription"</b>, not "One-time purchase". Square will then charge $66.25 each month and stop automatically after 12 payments. (Square's page says "cancel at any time"; your 12-month minimum in our terms still applies.)</div>
 <p style="font-size:14px;margin-top:10px;color:var(--muted)">Tick all three boxes above to continue.</p></li>
 </ol>
-<p style="color:var(--muted)">Once your first payment goes through, Daniel will send you a link to book your 1:1 setup session. Questions? Call us on 08 6222 7909 or email support@inspiredmoney.com.au.</p>
+<p style="color:var(--muted)">Once your payment goes through, Daniel will send you a link to book your 1:1 setup session. Questions? Call us on 08 6222 7909 or email support@inspiredmoney.com.au.</p>
 </div></section>
 </main>
 <script>
-const acks=[...document.querySelectorAll('.ack')],pay=document.getElementById('pay');
-const upd=()=>pay.setAttribute('aria-disabled',acks.every(a=>a.checked)?'false':'true');
+const acks=[...document.querySelectorAll('.ack')],pays=[...document.querySelectorAll('.pay')];
+const upd=()=>pays.forEach(p=>p.setAttribute('aria-disabled',acks.every(a=>a.checked)?'false':'true'));
 acks.forEach(a=>a.addEventListener('change',upd));
 </script>
 <footer>
