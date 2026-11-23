@@ -301,5 +301,19 @@ footer p+p{margin-top:12px}
 const FIT_CALL_URL = "https://bookings.cloud.microsoft/book/InspiredMoneyFinancialServices@inspiredmoney.com.au/";
 if (FIT_CALL_URL) { document.getElementById('fitcall').href = FIT_CALL_URL; } else { document.getElementById('fitcall').removeAttribute('target'); }
 </script>
+<script>
+/* Analytics: count the clicks that matter (apply form, fit call, payment links, in-page CTAs). */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a');
+  if (!a || typeof gtag !== 'function') return;
+  var href = a.getAttribute('href') || '', url = a.href || '';
+  var p = { link_text: (a.textContent || '').trim().slice(0, 60), page_path: location.pathname, transport_type: 'beacon' };
+  if (/forms\.(cloud\.microsoft|office\.com)/.test(url)) gtag('event', 'apply_start', p);
+  else if (/bookings\.cloud\.microsoft|outlook\.office\.com\/book/.test(url)) gtag('event', 'fit_call_start', p);
+  else if (/square\.link/.test(url)) gtag('event', 'payment_start', p);
+  else if (href === '#apply' || href === '#book') { p.cta = href.slice(1); gtag('event', 'cta_click', p); }
+});
+</script>
 </body>
+
 </html>
